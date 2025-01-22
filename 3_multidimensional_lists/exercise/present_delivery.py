@@ -37,7 +37,7 @@ while total_presents > 0:
     elif matrix[row][col] == 'C':
         cells = [matrix[row+1][col], matrix[row-1][col], matrix[row][col+1], matrix[row][col-1]]
         for cell in cells:
-            if cell == 'V' or cell == 'X':
+            if cell in 'VX':
                 total_presents -= 1
                 if cell == 'V':
                     nice_kids -= 1
